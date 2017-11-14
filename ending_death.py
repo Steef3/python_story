@@ -1,5 +1,7 @@
 from sys import exit
 
+# this print is for testing only
+# make sure that it will be changed to the actual number of goodie_points that the player has
 print("Please input a number!")
 goodie_points = input("> ")
 goodie_points = int(goodie_points)

@@ -15,25 +15,25 @@ def forest_start():
 
   choice = input("Choose wisely: ")
 
-  # TO DO: change all the strings to be independent of lower or capital letters
-  if "south" in choice or "South" in choice:
+  choice = choice.casefold()
+
+  if "south" in choice:
       print("You decided to go towards the South.")
       south()
 
-  elif "north" in choice or "North" in choice:
+  elif "north" in choice:
       print("You decided to go towards the North.")
       north()
 
-  elif "east" in choice or "East" in choice:
+  elif "east" in choice:
       print("You decided to go towards the East.")
       east()
 
-  elif "west" in choice or "West" in choice:
+  elif "west" in choice:
       print("You decided to go towards the West.")
       west()
 
-# TO DO: implement non-case sensitive version for this
-  elif "stomp" in choice or "Stomp" in choice or "ground" in choice or "Ground" in choice:
+  elif "stomp" in choice or "ground" in choice:
       print("You decided to stomp more.")
       print("That was a risky idea!!! That one last stomp was too much for the ground and you fall deep down into a cave.")
       print("Destroying ground (especially if it's not yours) is very bad! - 5 goodie-points.")
@@ -42,6 +42,7 @@ def forest_start():
       print("After recovering from the fall, you see three chests that are all shiny and do not have any locks.")
 
       # TO DO: figure out how to implement indentation for each decision that is needed
+      # TO DO: implement goodie_points here
       print("""Each chest has something written on it:
       1. 'Choose a job you love, and you will never have to work a day in your life.' - Confucius
       2. 'Love all, trust a few, do wrong to none.' - William Shakespeare

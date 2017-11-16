@@ -1,4 +1,6 @@
 # from x import y
+from ending_death import ending
+from goodie_points import goodie_points
 
 # STAGE 1
 def underwater_start():

@@ -1,5 +1,6 @@
 # from x import y
 from ending_death import ending
+from goodie_points import goodie_points
 
 # STAGE 1
 def forest_start():
@@ -55,7 +56,9 @@ def west():
 def below():
     print("That was a risky idea!!! That one last stomp was too much for the ground and you fall deep down into a cave.")
     # GOODIE POINTS
-    print("Destroying ground (especially if it's not yours) is very bad! - 5 goodie-points.")
+    print("Destroying ground (especially if it's not yours) is very bad!")
+    print("Goodie-points: -5")
+    goodie_points(-5)
 
     print("After recovering from the fall, you see three chests that are all shiny and do not have any locks.")
 
@@ -74,9 +77,12 @@ def below():
     # TO DO: improve checking for possible words
     if "1" in choice or "confucius" in choice:
         print("Confucius Test.")
+        goodie_points(45)
     elif "2" in choice or "william" in choice or "shakespeare" in choice:
         print("Shakespeare Test.")
+        goodie_points(10)
     elif "3" in choice or "dalai" in choice or "lama" in choice:
+        goodie_points(100)
         earth_core()
 
 # STAGE 3

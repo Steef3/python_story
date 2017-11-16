@@ -1,5 +1,5 @@
 # TO DO: do not use a global variable for security reasons
-goodie_points_count = 125
+goodie_points_count = 0
 
 def goodie_points(change):
 

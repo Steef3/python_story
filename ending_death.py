@@ -1,17 +1,15 @@
 from sys import exit
+from goodie_points import goodie_points_count
 
 # defines how a game ends, in case the player dies
 # system used on every map
 
+goodie_points = goodie_points_count
+
 # usage: ending(goodie_points)
 def ending():
 
-    # this print is for testing only
-    # TO DO: make sure that it will be changed to the actual number of goodie_points that the player has
-    print("Please input a number!")
-    goodie_points = input("> ")
-    goodie_points = int(goodie_points)
-
+    global goodie_points
     # TO DO: figure out a better way of displaying goodie-points
     print("You died and you have {} goodie-points!".format(goodie_points))
     if goodie_points < 100:

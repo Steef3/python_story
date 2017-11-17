@@ -11,7 +11,15 @@ def goodie_points(change):
     # goodie_points_count = int(goodie_points_count)
 
     # TO DO: add + for positive goodie-points/make distinction between - and +
-    print("Goodie-points: {}".format(change))
+    if change < 0:
+        print("Goodie-points: {}".format(change))
+    elif change == 0:
+        print("Goodie-points: 0")
+    elif change >= 0:
+        print(f"Goodie-points: +{change}")
+    # the following should never actually run
+    else:
+        print("The game broke, please restart!")
 
     goodie_points_count = goodie_points_count + change
 
@@ -24,14 +32,8 @@ def goodie_points(change):
         goodie_file.writelines(data)
     print(f"Current count: {goodie_points_count}!")
 
-# TO DO: reset goodie_points_count for each map
-'''
-def startgame():
-    goodie_points_count = 0
-'''
-
 # Goodie-point syntax
 '''
-print("Goodie-points: +/- x")
+print("Goodie-points: +/-x")
 goodie_points(x)
 '''

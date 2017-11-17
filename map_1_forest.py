@@ -22,23 +22,19 @@ def forest_start():
   if "south" in choice:
       print("You decided to go towards the South.")
       south()
-
   elif "north" in choice:
       print("You decided to go towards the North.")
       north()
-
   elif "east" in choice:
       print("You decided to go towards the East.")
       east()
-
   elif "west" in choice:
       print("You decided to go towards the West.")
       west()
-
   elif "stomp" in choice or "ground" in choice:
       print("You decided to stomp more.")
       below()
-
+      # TO DO: implement function usable for every else
   else:
       print("You typed in something the game does not understand and that made it explode.")
       # WARNING: make sure to change, when goodie-points are actually implemented
@@ -57,7 +53,6 @@ def below():
     print("That was a risky idea!!! That one last stomp was too much for the ground and you fall deep down into a cave.")
     # GOODIE POINTS
     print("Destroying ground (especially if it's not yours) is very bad!")
-    print("Goodie-points: -5")
     goodie_points(-5)
 
     print("After recovering from the fall, you see three chests that are all shiny and do not have any locks.")
@@ -79,20 +74,17 @@ def below():
         print("You try to open the chest, but it is locked and you can't get it open without the key!")
         print("You start looking for the key, but can't find it anywhere.")
         print("All grumpy and annoyed, you sit down on a rock and put your hands in your pockets and BAM! - There's a key in your pocket!")
-        print("Goodie-points: +45")
         goodie_points(45)
         print("You open the chest and it's full of gold!")
         # TO DO: continue story leading to gold_chest
     elif "2" in choice or "william" in choice or "shakespeare" in choice:
         print("The chest opens and you see Shakespeares ghost rise up from the chest.")
-        print("Goodie-points: +10")
         goodie_points(10)
         print("'Who dares to wake me up from my eternal sleep???'")
         print("You are extremely scared and don't know what to do and just start sleeping on the ground - hoping that the ghost will go away.")
     elif "3" in choice or "dalai" in choice or "lama" in choice:
         print("You open chest number 3 and you hear all voices of all Dalai Lamas ever! Every Dalai Lama is mumbling something else.")
         print("You don't know what to make of all this, but you are happy that you got the chest with the most points in it!")
-        print("Goodie-points: + 100")
         goodie_points(100)
         print("Suddenly, the earth starts shaking and the bottom of the chest opens up and sucks you into it!")
         print("You fall for several miles until you reach the core of the earth, which surpisingly is not that hot...")
@@ -106,6 +98,7 @@ def south_west():
 def north_pole():
     print("North Pole Test.")
 def gold_chest():
+    print("Gold Chest Test.")
 def earth_core():
     print("Earth Core Test.")
 

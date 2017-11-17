@@ -1,4 +1,12 @@
-# python_story
+# python_story   
+## Overview
 A mini-game created in Python 3.   
 Inspired by https://www.myabandonware.com/game/zork-trilogy-2g2/play-2g2.   
-Studying thanks to "Learn Python 3 The Hard Way" by Zed A. Shaw at https://learncodethehardway.org/python/.
+Studying thanks to "Learn Python 3 The Hard Way" by Zed A. Shaw at https://learncodethehardway.org/python/.   
+
+## How to run   
+Run any of the maps via   
+python3.6 (for Mac) map_x_name   
+python (for Windows) map_x_name   
+
+## Other

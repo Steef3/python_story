@@ -1,5 +1,5 @@
 # TO DO: do not use a global variable for security reasons
-goodie_points_count = 90
+goodie_points_count = 0
 
 # TO DO: display the number of gained goodie-points automatically, instead of printing them every time separately
 
@@ -10,6 +10,7 @@ def goodie_points(change):
     # TO FIGURE OUT: why is this line not needed?
     # goodie_points_count = int(goodie_points_count)
 
+    # TO DO: add + for positive goodie-points/make distinction between - and +
     print("Goodie-points: {}".format(change))
 
     goodie_points_count = goodie_points_count + change

@@ -42,7 +42,9 @@ def forest_start():
 
 # STAGE 2
 def south():
-    print("South Test.")
+    print("South Test. +500")
+    goodie_points(500)
+    ending()
 def north():
     print("North Test.")
 def east():

@@ -3,12 +3,13 @@ from sys import exit
 # defines how a game ends, in case the player dies
 # system used on every map
 
-# usage: ending(goodie_points)
+# usage: ending("number of goodie-points")
 def ending():
 
     from goodie_points import goodie_points_count
+
     goodie_points = goodie_points_count
-    # TO DO: figure out a better way of displaying goodie-points
+
     print("You died and you have {} goodie-points!".format(goodie_points))
     if goodie_points < 100:
         hell()
@@ -42,6 +43,7 @@ def rebirth():
     reset_goodie_points()
     exit(0)
 
+# this will reset the goodie-points counter to 0
 def reset_goodie_points():
     with open('goodie_points.py', 'r') as goodie_file:
         data = goodie_file.readlines()

@@ -10,13 +10,19 @@ def clouds_start():
 def fluffy():
     ending()
 def lower():
+    pass
 def higher():
+    pass
 def no_clouds():
+    pass
 def dark_clouds():
+    pass
 
 # STAGE 3
 def even_lower():
+    pass
 def space():
+    pass
 def rainbow():
     ending()
 def lighting():
@@ -24,6 +30,7 @@ def lighting():
 def thunder():
     ending()
 def rain():
+    pass
 
 # STAGE 4
 def fall_dead():

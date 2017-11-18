@@ -10,9 +10,11 @@ def underwater_start():
 def red_water():
     ending()
 def green_water():
+    pass
 def yellow_water():
     ending()
 def blue_water():
+    pass
 
 # STAGE 3
 def light_green_water():
@@ -20,6 +22,7 @@ def light_green_water():
 def dark_green_water():
     ending()
 def blue_water_far():
+    pass
 
 # STAGE 4
 def blue_water_way_too_far():

@@ -1,4 +1,5 @@
 from sys import exit
+import random
 
 # defines how a game ends, in case the player dies
 # system used on every map
@@ -39,10 +40,11 @@ def heaven():
 # having more than 499 goodie-points leads to moving on towards a new map, even though the player died
 def rebirth():
     print("Since you have earned so many goodie-points God grants you another life on a random map!")
-    # TO DO: random new map xyz
     reset_goodie_points()
+    # TO DO: import maps and pick a random map
+    # maps = (forest_start, underwater_start, clouds_start, mountain_start)
+    # TO DO: remove exit()
     exit(0)
-
 # this will reset the goodie-points counter to 0
 def reset_goodie_points():
     with open('goodie_points.py', 'r') as goodie_file:
@@ -52,3 +54,4 @@ def reset_goodie_points():
 
     with open('goodie_points.py', 'w') as goodie_file:
         goodie_file.writelines(data)
+    print("Points have been reset to 0.")

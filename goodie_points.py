@@ -17,6 +17,7 @@ def goodie_points(change):
     # the following should never actually run
     else:
         print("The game broke, please restart!")
+        exit(0)
 
     goodie_points_count = goodie_points_count + change
 
@@ -29,8 +30,7 @@ def goodie_points(change):
         goodie_file.writelines(data)
     print(f"Current count: {goodie_points_count}!")
 
-# Goodie-point syntax
+# Goodie-point syntax and info
 '''
-print("Goodie-points: +/-x")
 goodie_points(x)
 '''

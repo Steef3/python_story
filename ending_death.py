@@ -5,13 +5,24 @@ import random
 # system used on every map
 
 # usage: ending("number of goodie-points")
-def ending():
+def ending(kind):
 
     from goodie_points import goodie_points_count
 
     goodie_points = goodie_points_count
 
-    print("You died and you have {} goodie-points!".format(goodie_points))
+    # two kinds of endings implemented so far
+
+    if kind == "completed":
+        print("You have completed this map and you have {} goodie-points! How much you have earned will determine your fate now!".format(goodie_points))
+    elif kind == "death":
+        print("You died. You start counting your goodie-points and find yourself having earned {} goodie-points!".format(goodie_points))
+    else:
+        print("The game broke...")
+        reset_goodie_points()
+        exit(0)
+
+    # three different types of endings regarding goodie-points so far
     if goodie_points < 100:
         hell()
     elif goodie_points >= 100 and goodie_points < 500:
@@ -54,4 +65,4 @@ def reset_goodie_points():
 
     with open('goodie_points.py', 'w') as goodie_file:
         goodie_file.writelines(data)
-    print("Points have been reset to 0.")
+    print("Points will be reset to 0.")

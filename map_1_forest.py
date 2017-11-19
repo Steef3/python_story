@@ -36,15 +36,13 @@ def forest_start():
       below()
       # TO DO: implement function usable for every else
   else:
-      print("You typed in something the game does not understand and that made it explode.")
-      # WARNING: make sure to change, when goodie-points are actually implemented
-      ending()
+      else_function()
 
 # STAGE 2
 def south():
-    print("South Test. +500")
+    print("South Test.")
     goodie_points(500)
-    ending()
+    ending("completed")
 def north():
     print("North Test.")
 def east():
@@ -78,7 +76,7 @@ def below():
         print("All grumpy and annoyed, you sit down on a rock and put your hands in your pockets and BAM! - There's a key in your pocket!")
         goodie_points(+45)
         print("You open the chest and it's full of gold!")
-        # TO DO: continue story leading to gold_chest
+        gold_chest()
     elif "2" in choice or "william" in choice or "shakespeare" in choice:
         print("The chest opens and you see Shakespeares ghost rise up from the chest.")
         goodie_points(+10)
@@ -91,22 +89,62 @@ def below():
         print("Suddenly, the earth starts shaking and the bottom of the chest opens up and sucks you into it!")
         print("You fall for several miles until you reach the core of the earth, which surpisingly is not that hot...")
         earth_core()
+    else:
+        else_function()
 
 # STAGE 3
 def north_west():
     print("North West Test.")
-    ending()
+    ending("completed")
 def south_west():
     print("South West Test.")
-    ending()
+    ending("death")
 def north_pole():
     print("North Pole Test.")
-    ending()
+    ending("completed")
 def gold_chest():
-    print("Gold Chest Test.")
-    ending()
+    print("There's so much gold and it's shining so much that you almost go blind!")
+    print("You wait until the shining stops and look at all the gold in front of you.")
+    print("""How much do you take?
+    1. I won't take anything, it's not mine! - 'take nothing'
+    2. No one will miss one gold coin, right? - 'one coin'
+    3. I only have two hands, so I will take two hands full. - 'two hands full'
+    4. Why not fill all my pockets? - 'fill up pockets'
+    5. I'll DEFINITELY figure out a way to get this heavy chest home some way or another! - 'take it all'""")
+
+    choice = input("Please input one of the options after each statement: ")
+
+    choice = choice.casefold()
+
+    if choice == "take nothing":
+        print("You are an honorable person and being an honorable person pays off!")
+        goodie_points(1000)
+        ending("completed")
+    elif choice == "one coin":
+        print("You take the coin, but immediately feel guilty and throw it back it. You tell yourself that you don't need the gold, which is true!")
+        goodie_points(300)
+        ending("completed")
+    elif choice == "two hands full":
+        print("You hold on tight to the gold and try to climb back up. On the way up, you lose almost all of it, but you do make it home with a fortune!")
+        goodie_points(150)
+        ending("completed")
+    elif choice == "fill up pockets":
+        print("You fill up your pockets with as much gold as you can. As you start climbing upwards again, the gold becomes heavier and heavier. Suddenly the ground starts shaking and you can't hold onto the wall of dirt anymore and fall far far down.")
+        goodie_points(-10)
+        ending("death")
+    elif choice == "take it all":
+        print("You try to take the whole chest with you for hours and hours! You don't want to give up, so you die of starvation. Greed kills.")
+        goodie_points(-100)
+        ending("death")
+    else:
+        else_function()
+
 def earth_core():
     print("Earth Core Test.")
-    ending()
+    ending("death")
+
+def else_function():
+    print("You typed in something the game does not understand and that made it explode.")
+    ending("death")
 
 forest_start()

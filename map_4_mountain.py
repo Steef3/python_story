@@ -14,7 +14,7 @@ def first_stage():
 def long_path():
     pass
 def rest_first_stage():
-    ending()
+    ending("death")
 
 # STAGE 4
 def long_path_right():
@@ -26,7 +26,7 @@ def direct_climbing():
 
 # STAGE 5
 def dead_end():
-    ending()
+    ending("death")
 def plateau():
     pass
 def stuck():
@@ -35,7 +35,7 @@ def stuck():
 # STAGE 6 or 7
 # climb_down can be called either after stuck() or after wait()
 def climb_down():
-    ending()
+    ending("completed")
 
 # STAGE 6
 def cave_left():
@@ -57,6 +57,6 @@ def wait_more():
 
 # STAGE 7/8, depending on path
 def top():
-    ending()
+    ending("completed")
 
 mountain_start()

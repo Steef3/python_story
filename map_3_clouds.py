@@ -8,7 +8,7 @@ def clouds_start():
 
 # STAGE 2
 def fluffy():
-    ending()
+    ending("completed")
 def lower():
     pass
 def higher():
@@ -24,22 +24,22 @@ def even_lower():
 def space():
     pass
 def rainbow():
-    ending()
+    ending("completed")
 def lighting():
-    ending()
+    ending("death")
 def thunder():
-    ending()
+    ending("death")
 def rain():
     pass
 
 # STAGE 4
 def fall_dead():
-    ending()
+    ending("death")
 def more_space():
-    ending()
+    ending("completed")
 def moon():
-    ending()
+    ending("completed")
 def snow():
-    ending()
+    ending("completed")
 
 clouds_start()

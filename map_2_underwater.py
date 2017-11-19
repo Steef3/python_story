@@ -8,25 +8,25 @@ def underwater_start():
 
 # STAGE 2
 def red_water():
-    ending()
+    ending("death")
 def green_water():
     pass
 def yellow_water():
-    ending()
+    ending("death")
 def blue_water():
     pass
 
 # STAGE 3
 def light_green_water():
-    ending()
+    ending("completed")
 def dark_green_water():
-    ending()
+    ending("completed")
 def blue_water_far():
     pass
 
 # STAGE 4
 def blue_water_way_too_far():
-    ending()
+    ending("death")
 
 
 underwater_start()

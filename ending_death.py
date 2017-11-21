@@ -53,7 +53,16 @@ def rebirth():
     print("Since you have earned so many goodie-points God grants you another life on a random map!")
     reset_goodie_points()
     # TO DO: import maps and pick a random map
-    # maps = (forest_start, underwater_start, clouds_start, mountain_start)
+    reset_goodie_points()
+    # TO DO: fix random and run functions within the correct files and not in edning_death.py
+    '''
+    from map_1_forest import forest_start
+    from map_2_underwater import underwater_start
+    from map_3_clouds import clouds_start
+    from map_4_mountain import mountain_start
+    maps = [forest_start, underwater_start, clouds_start, mountain_start]
+    random.choice(maps)
+    '''
     # TO DO: remove exit()
     exit(0)
 # this will reset the goodie-points counter to 0
